@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CrawlingPage</title>
+</head>
+<body>
+    
+    <h2>크롤링한 Data</h2>
+    <p class="bg-danger">
+        {{crawl|linebreaks}}
+    </p>
+    <br>
+    <h2>크롤링 단어 카운트:</h2>
+    <p class="bg-danger">
+        {% for word2, howmany2 in dictionary2 %}
+        {{ word2 }} : {{ howmany2 }}
+        <br><br>
+        {% endfor %}
+    </p>
+    <br>
+    <a href="{% url 'home' %}" class="btn btn-danger"> 다시 검색 </a>
+        
+</body>
+</html>
